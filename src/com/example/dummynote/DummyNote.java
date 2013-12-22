@@ -1,5 +1,6 @@
 package com.example.dummynote;
 
+
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -10,15 +11,17 @@ public class DummyNote extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_dummy_note);
+		setContentView(R.layout.main);
+		getListView().setEmptyView(findViewById(R.id.empty));
 		setAdapter();
 	}
 	
 	private String[] note_array={
-			"Gasolin",
+		/*	"Gasolin",
 			"Haifeng Li",
 			"Lin Yang",
 			"MagicIon"
+			*/
 	};
 	
 	private void setAdapter(){
